@@ -3,11 +3,11 @@
 (function () {
     var pico = require('./src/pico');
 
-    pico.getPowerMode().then(function (val) {
+    pico.powerMode.then(function (val) {
         return console.log('Current power mode :', pico.powerModes[val]);
-    }).currentBatteryVoltage().then(function (val) {
+    }).currentBatteryVoltage.then(function (val) {
         return console.log('Current Power voltage :', val);
-    }).currentRpiVoltage().then(function (val) {
+    }).currentRpiVoltage.then(function (val) {
         return console.log('Current Power voltage :', val);
     });
 })();
