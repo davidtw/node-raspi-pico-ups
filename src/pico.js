@@ -7,8 +7,12 @@ module.exports = function () {
 
     var powerModes = ['battery', 'usb'];
 
-    function readBytes(command) {
+    function readByte(command) {
         return i2c1.readByteSync(address, command);
+    }
+
+    function readWord(command) {
+        return i2c1.readWordSync(address, command);
     }
 
     return {
@@ -20,16 +24,16 @@ module.exports = function () {
         },
 
         getCurrentPowerMode: function getCurrentPowerMode() {
-            return readBytes(0x00);
+            return readByte(0x00);
         },
         getCurrentBatteryVoltage: function getCurrentBatteryVoltage() {
-            return readBytes(0x08);
+            return readWord(0x08);
         },
         getCurrentRpiVoltage: function getCurrentRpiVoltage() {
-            return readBytes(0x0a);
+            return readWord(0x0a);
         },
         getTemperature: function getTemperature() {
-            return readBytes(0x1b);
+            return readWord(0x1b);
         }
     };
 }();
