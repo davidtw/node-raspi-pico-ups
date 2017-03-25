@@ -14,16 +14,16 @@ module.exports = (function () {
     }
 
     return {
-        get powerModes() {
+        getPowerModes: () => {
             return powerModes;
         },
-        get currentPowerMode() {
+        getCurrentPowerMode: () => {
             return readBytes(0, 1);
         },
-        get currentBatteryVoltage() {
+        getCurrentBatteryVoltage: () => {
             return readBytes(1, 2);
         },
-        get currentRpiVoltage() {
+        getCurrentRpiVoltage: () => {
             return readBytes(3, 2);
         }
     };
