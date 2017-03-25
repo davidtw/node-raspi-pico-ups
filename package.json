@@ -1,0 +1,19 @@
+{
+  "name": "node-raspi-pico-ups",
+  "version": "1.0.0",
+  "description": "Node helper to access pico ups states and variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtw/node-raspi-pico-ups.git"
+  },
+  "author": "David Twigger <davidtwigger@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidtw/node-raspi-pico-ups/issues"
+  },
+  "homepage": "https://github.com/davidtw/node-raspi-pico-ups#readme"
+}
