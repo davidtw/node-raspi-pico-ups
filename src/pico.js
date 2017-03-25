@@ -5,7 +5,7 @@ module.exports = function () {
     var i2c1 = i2c.openSync(1);
     var address = 0x69;
 
-    var powerModes = ['battery', 'usb'];
+    var powerModes = ['usb', 'battery'];
 
     function readByte(command) {
         return i2c1.readByteSync(address, command);
