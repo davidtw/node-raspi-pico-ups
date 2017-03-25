@@ -11,13 +11,14 @@ module.exports = function () {
         get powerModes() {
             return powerModes;
         },
-        getPowerMode: function getPowerMode() {
+        cuPowerMode: function cuPowerMode() {
             return new Promise(function (resolve) {
                 wire.readBytes(0, 1, function (err, res) {
                     resolve(res[0]);
                 });
             });
-        }
+        },
+        getPower: getPower
     };
 }();
 //# sourceMappingURL=pico.js.map

@@ -5,16 +5,26 @@ module.exports = (function () {
 
     const powerModes = ['battery', 'usb'];
 
+    function readBytes(start, length) {
+        return new Promise((resolve) => {
+            wire.readBytes(start, length, function (err, res) {
+                resolve(res[0]);
+            });
+        });
+    }
+
     return {
         get powerModes() {
             return powerModes;
         },
-        getPowerMode: () => {
-            return new Promise((resolve) => {
-                wire.readBytes(0, 1, function (err, res) {
-                    resolve(res[0]);
-                });
-            });
+        get currentPowerMode() => {
+            return readBytes(0, 1);
+        },
+        get currentBatteryVoltage() => {
+            return readBytes(1, 2);
+        },
+        get currentRpiVoltage() => {
+            return readBytes(3, 2);
         }
     };
 }());
