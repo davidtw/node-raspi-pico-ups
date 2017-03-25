@@ -1,3 +1,4 @@
 *.es6
 .git
 npm-debug.log
+*.map
