@@ -7,18 +7,27 @@ module.exports = function () {
 
     var powerModes = ['battery', 'usb'];
 
+    function readBytes(start, length) {
+        return new Promise(function (resolve) {
+            wire.readBytes(start, length, function (err, res) {
+                resolve(res[0]);
+            });
+        });
+    }
+
     return {
         get powerModes() {
             return powerModes;
         },
-        cuPowerMode: function cuPowerMode() {
-            return new Promise(function (resolve) {
-                wire.readBytes(0, 1, function (err, res) {
-                    resolve(res[0]);
-                });
-            });
+        get currentPowerMode() {
+            return readBytes(0, 1);
         },
-        getPower: getPower
+        get currentBatteryVoltage() {
+            return readBytes(1, 2);
+        },
+        get currentRpiVoltage() {
+            return readBytes(3, 2);
+        }
     };
 }();
 //# sourceMappingURL=pico.js.map

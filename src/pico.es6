@@ -17,13 +17,13 @@ module.exports = (function () {
         get powerModes() {
             return powerModes;
         },
-        get currentPowerMode() => {
+        get currentPowerMode() {
             return readBytes(0, 1);
         },
-        get currentBatteryVoltage() => {
+        get currentBatteryVoltage() {
             return readBytes(1, 2);
         },
-        get currentRpiVoltage() => {
+        get currentRpiVoltage() {
             return readBytes(3, 2);
         }
     };
