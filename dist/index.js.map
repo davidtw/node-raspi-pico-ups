@@ -1,0 +1,1 @@
+{"version":3,"sources":["../index.js"],"names":["pico","require","console","log","getPowerMode"],"mappings":";;AAAC,aAAW;AACR,QAAMA,OAAOC,QAAQ,YAAR,CAAb;;AAEAC,YAAQC,GAAR,CAAYH,KAAKI,YAAL,EAAZ;AACH,CAJA,GAAD","file":"index.js","sourcesContent":["(function() {\r\n    const pico = require('./src/pico');\r\n\r\n    console.log(pico.getPowerMode());\r\n}());"]}
