@@ -2,7 +2,7 @@
     const pico = require('./src/pico');
 
     let val = pico.getCurrentPowerMode();
-    console.log('Current power mode :', pico.getCurrentPowerMode(), pico.getPowerModeLabel[val]);
+    console.log('Current power mode :', val, pico.getPowerModeLabel(val));
 
     console.log('Current Battery voltage :', pico.getCurrentBatteryVoltage());
 
