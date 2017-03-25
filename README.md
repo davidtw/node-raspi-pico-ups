@@ -3,7 +3,7 @@ Node helper to access pico ups info for pimodules' [HV3.0a 450 model](http://www
 
 [![NPM Downloads](https://img.shields.io/npm/dt/node-raspi-pico-ups.svg?style=flat-square)](https://www.npmjs.com/node-raspi-pico-ups)
 [![License](https://img.shields.io/npm/l/node-raspi-pico-ups.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-
+[![NPM Version](https://img.shields.io/npm/v/node-raspi-pico-ups.svg?style=flat-square)](https://npmjs.org/node-raspi-pico-ups)
 
 ## Installation
 
