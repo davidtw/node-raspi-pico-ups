@@ -1,5 +1,8 @@
-(function() {
-    const pico = require('./src/pico');
+'use strict';
+
+(function () {
+    var pico = require('./src/pico');
 
     console.log(pico.getPowerMode());
-}());
+})();
+//# sourceMappingURL=index.js.map
