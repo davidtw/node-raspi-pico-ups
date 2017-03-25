@@ -3,20 +3,13 @@
 (function () {
     var pico = require('./src/pico');
 
-    pico.getCurrentPowerMode().then(function (val) {
-        console.log('Current power mode :', pico.getPowerModeLabel[val]);
-    });
+    var val = pico.getCurrentPowerMode();
+    console.log('Current power mode :', pico.getPowerModeLabel[val]);
 
-    pico.getCurrentBatteryVoltage().then(function (val) {
-        console.log('Current Battery voltage :', val);
-    });
+    console.log('Current Battery voltage :', pico.getCurrentBatteryVoltage());
 
-    pico.getCurrentRpiVoltage().then(function (val) {
-        return console.log('Current Power voltage :', val);
-    });
+    console.log('Current Power voltage :', pico.getCurrentRpiVoltage());
 
-    pico.getTemperature().then(function (val) {
-        return console.log('Temperature :', val, '°C');
-    });
+    console.log('Temperature :', pico.getTemperature(), '°C');
 })();
 //# sourceMappingURL=index.js.map

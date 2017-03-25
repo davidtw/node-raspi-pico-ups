@@ -1,18 +1,14 @@
 'use strict';
 
 module.exports = function () {
-    var i2c = require('i2c');
+    var i2c = require('i2c-bus');
+    var i2c1 = i2c.openSync(1);
     var address = 0x69;
-    var wire = new i2c(address, { device: '/dev/i2c-1' });
 
     var powerModes = ['battery', 'usb'];
 
-    function readBytes(start, length) {
-        return new Promise(function (resolve) {
-            wire.readBytes(start, length, function (err, res) {
-                resolve(res[0]);
-            });
-        });
+    function readBytes(command) {
+        return i2c1.readByteSync(address, command);
     }
 
     return {
@@ -24,16 +20,16 @@ module.exports = function () {
         },
 
         getCurrentPowerMode: function getCurrentPowerMode() {
-            return readBytes(0, 1);
+            return readBytes(0x00);
         },
         getCurrentBatteryVoltage: function getCurrentBatteryVoltage() {
-            return readBytes(8, 2);
+            return readBytes(0x08);
         },
         getCurrentRpiVoltage: function getCurrentRpiVoltage() {
-            return readBytes(10, 2);
+            return readBytes(0x0a);
         },
         getTemperature: function getTemperature() {
-            return readBytes(27, 1);
+            return readBytes(0x1b);
         }
     };
 }();
