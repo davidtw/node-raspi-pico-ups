@@ -9,7 +9,7 @@ module.exports = function () {
         getPowerMode: function getPowerMode() {
             return new Promise(function (resolve) {
                 wire.readBytes(0, 1, function (err, res) {
-                    resolve(res.toString('utf-8'));
+                    resolve(res[0]);
                 });
             });
         }
