@@ -7,8 +7,10 @@ module.exports = function () {
 
     return {
         getPowerMode: function getPowerMode() {
-            return wire.readBytes(0, 1, function (err, res) {
-                console.log(res);
+            return new Promise(function (resolve) {
+                wire.readBytes(0, 1, function (err, res) {
+                    resolve(res.toString('utf-8'));
+                });
             });
         }
     };

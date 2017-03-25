@@ -3,6 +3,8 @@
 (function () {
     var pico = require('./src/pico');
 
-    console.log(pico.getPowerMode());
+    pico.getPowerMode().then(function (val) {
+        return console.log(val);
+    });
 })();
 //# sourceMappingURL=index.js.map

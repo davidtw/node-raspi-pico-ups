@@ -1,5 +1,7 @@
-(function() {
+(function () {
     const pico = require('./src/pico');
 
-    console.log(pico.getPowerMode());
+    pico
+        .getPowerMode()
+        .then((val) => console.log(val));
 }());

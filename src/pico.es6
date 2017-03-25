@@ -5,8 +5,10 @@ module.exports = (function () {
 
     return {
         getPowerMode: () => {
-            return wire.readBytes(0, 1, function (err, res) {
-                console.log(res);
+            return new Promise((resolve) => {
+                wire.readBytes(0, 1, function (err, res) {
+                    resolve(res.toString('utf-8'));
+                });
             });
         }
     };
