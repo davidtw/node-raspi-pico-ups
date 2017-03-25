@@ -18,7 +18,7 @@ npm install --save node-raspi-pico-ups
 ### getPowerModeLabel
 Retrurn the label of the power mode (usb or battery)
 ```javascript
-var pico = require('node-raspi-pico-ups').pico;
+var pico = require('node-raspi-pico-ups');
 
 console.log('Current power mode :', pico.getPowerModeLabel(val));
 //Current power mode : usb
@@ -26,7 +26,7 @@ console.log('Current power mode :', pico.getPowerModeLabel(val));
 ### getCurrentPowerMode
 Returns the current battery mode (1 for usb, 2 for battery)
 ```javascript
-var pico = require('node-raspi-pico-ups').pico;
+var pico = require('node-raspi-pico-ups');
 
 console.log('Current power mode :', pico.getCurrentPowerMode());
 //Current power mode : 1
@@ -35,7 +35,7 @@ console.log('Current power mode :', pico.getCurrentPowerMode());
 ### getCurrentBatteryVoltage
 Returns the battery voltage
 ```javascript
-var pico = require('node-raspi-pico-ups').pico;
+var pico = require('node-raspi-pico-ups');
 
 console.log('Current Battery voltage :', pico.getCurrentBatteryVoltage(), 'V');
 //Current Battery voltage : 4.21 V
@@ -44,7 +44,7 @@ console.log('Current Battery voltage :', pico.getCurrentBatteryVoltage(), 'V');
 ### getCurrentRpiVoltage
 Returns the raspberry's current power supply voltage
 ```javascript
-var pico = require('node-raspi-pico-ups').pico;
+var pico = require('node-raspi-pico-ups');
 
 console.log('Current Power voltage :', pico.getCurrentRpiVoltage(), 'V');
 //Current Power voltage : 4.882 V
@@ -53,7 +53,7 @@ console.log('Current Power voltage :', pico.getCurrentRpiVoltage(), 'V');
 ### getTemperature
 Returns the temperature mesured by the embedded NTC1 sensor 
 ```javascript
-var pico = require('node-raspi-pico-ups').pico;
+var pico = require('node-raspi-pico-ups');
 
 console.log('Temperature :', pico.getTemperature(), '°C');
 //Temperature : 50 °C

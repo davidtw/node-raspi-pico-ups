@@ -10,10 +10,8 @@ exports.pico = function () {
         console.log('Current Power voltage :', pico.getCurrentRpiVoltage(), 'V');
         console.log('Temperature :', pico.getTemperature(), '°C');
     }
+    pico.printInfo = printInfo;
 
-    return {
-        pico: pico,
-        printInfo: printInfo
-    };
+    return pico;
 }();
 //# sourceMappingURL=index.js.map

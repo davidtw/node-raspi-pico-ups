@@ -8,9 +8,7 @@ exports.pico = (function () {
         console.log('Current Power voltage :', pico.getCurrentRpiVoltage(), 'V');
         console.log('Temperature :', pico.getTemperature(), '°C');
     }
+    pico.printInfo = printInfo;
 
-    return {
-        pico,
-        printInfo
-    };
+    return pico;
 }());
