@@ -17,7 +17,7 @@ module.exports = function () {
 
     return {
         getPowerModeLabel: function getPowerModeLabel(mode) {
-            if (!mode || mode + 1 > powerModes.length) {
+            if (!mode || mode >= powerModes.length) {
                 return undefined;
             }
             return powerModes[mode + 1];
