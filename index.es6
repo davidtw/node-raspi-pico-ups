@@ -10,7 +10,7 @@
         .then((val) => {
             console.log('Current Power voltage :', val);
             return pico;
-        })
+        })  
         .getCurrentRpiVoltage()
         .then((val) => console.log('Current Power voltage :', val));
 }());

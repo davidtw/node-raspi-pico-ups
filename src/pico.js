@@ -16,7 +16,7 @@ module.exports = function () {
     }
 
     return {
-        owerModes: function owerModes() {
+        get powerModes() {
             return powerModes;
         },
         getCurrentPowerMode: function getCurrentPowerMode() {
