@@ -27,10 +27,10 @@ module.exports = function () {
             return readByte(0x00);
         },
         getCurrentBatteryVoltage: function getCurrentBatteryVoltage() {
-            return parseInt(readWord(0x08), 16) / 100;
+            return parseInt(readWord(0x08), 16) / 1000;
         },
         getCurrentRpiVoltage: function getCurrentRpiVoltage() {
-            return parseInt(readWord(0x0a), 16) / 100;
+            return parseInt(readWord(0x0a), 16) / 1000;
         },
         getTemperature: function getTemperature() {
             return readByte(0x1b);

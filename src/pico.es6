@@ -24,10 +24,10 @@ module.exports = (function () {
             return readByte(0x00);
         },
         getCurrentBatteryVoltage: () => {
-            return parseInt(readWord(0x08), 16) / 100;
+            return parseInt(readWord(0x08), 16) / 1000;
         },
         getCurrentRpiVoltage: () => {
-            return parseInt(readWord(0x0a), 16) / 100;
+            return parseInt(readWord(0x0a), 16) / 1000;
         },
         getTemperature: () => {
             return readByte(0x1b);
