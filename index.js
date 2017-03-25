@@ -5,9 +5,11 @@
 
     pico.getCurrentPowerMode().then(function (val) {
         return console.log('Current power mode :', pico.powerModes[val]);
-    }).getCurrentBatteryVoltage().then(function (val) {
+    });
+    pico.getCurrentBatteryVoltage().then(function (val) {
         return console.log('Current Power voltage :', val);
-    }).getCurrentRpiVoltage().then(function (val) {
+    });
+    pico.getCurrentRpiVoltage().then(function (val) {
         return console.log('Current Power voltage :', val);
     });
 })();
