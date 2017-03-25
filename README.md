@@ -1,5 +1,5 @@
 # node-raspi-pico-ups
-Node helper to access pico ups info.
+Node helper to access pico ups info for pimodules' [HV3.0a 450 model](http://www.pimodulescart.com/shop/item.aspx?itemid=30)
 
 [![NPM Downloads](https://img.shields.io/npm/dt/node-raspi-pico-ups.svg?style=flat-square)](https://www.npmjs.com/node-raspi-pico-ups)
 [![License](https://img.shields.io/npm/l/node-raspi-pico-ups.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -72,4 +72,4 @@ Current power mode : usb
 Current Battery voltage : 4.21 V
 Current Power voltage : 4.882 V
 Temperature : 50 °C
-``
+```
