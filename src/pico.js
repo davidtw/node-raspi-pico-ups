@@ -33,7 +33,7 @@ module.exports = function () {
             return parseInt(readWord(0x0a), 16);
         },
         getTemperature: function getTemperature() {
-            return parseInt(readWord(0x1b), 16);
+            return readByte(0x1b);
         }
     };
 }();
