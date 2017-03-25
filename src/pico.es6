@@ -14,17 +14,23 @@ module.exports = (function () {
     }
 
     return {
-        get powerModes () {
-            return powerModes;
+        getPowerModeLabel (mode) {
+            if(!mode || (mode + 1) > powerModes.length) {
+                return undefined;
+            }
+            return powerModes[mode + 1];
         },
         getCurrentPowerMode: () => {
             return readBytes(0, 1);
         },
         getCurrentBatteryVoltage: () => {
-            return readBytes(1, 2);
+            return readBytes(8, 2);
         },
         getCurrentRpiVoltage: () => {
-            return readBytes(3, 2);
+            return readBytes(10, 2);
+        },
+        getTemperature: () => {
+            return readBytes(27, 1);
         }
     };
 }());

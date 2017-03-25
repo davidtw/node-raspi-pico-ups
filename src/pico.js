@@ -16,17 +16,24 @@ module.exports = function () {
     }
 
     return {
-        get powerModes() {
-            return powerModes;
+        getPowerModeLabel: function getPowerModeLabel(mode) {
+            if (!mode || mode + 1 > powerModes.length) {
+                return undefined;
+            }
+            return powerModes[mode + 1];
         },
+
         getCurrentPowerMode: function getCurrentPowerMode() {
             return readBytes(0, 1);
         },
         getCurrentBatteryVoltage: function getCurrentBatteryVoltage() {
-            return readBytes(1, 2);
+            return readBytes(8, 2);
         },
         getCurrentRpiVoltage: function getCurrentRpiVoltage() {
-            return readBytes(3, 2);
+            return readBytes(10, 2);
+        },
+        getTemperature: function getTemperature() {
+            return readBytes(27, 1);
         }
     };
 }();
