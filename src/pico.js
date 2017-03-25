@@ -20,7 +20,7 @@ module.exports = function () {
             if (!mode || mode >= powerModes.length) {
                 return undefined;
             }
-            return powerModes[mode + 1];
+            return powerModes[mode - 1];
         },
 
         getCurrentPowerMode: function getCurrentPowerMode() {
