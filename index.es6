@@ -3,5 +3,5 @@
 
     pico
         .getPowerMode()
-        .then((val) => console.log(val));
+        .then((val) => console.log('Current power mode :', pico.powerModes[val]));
 }());
