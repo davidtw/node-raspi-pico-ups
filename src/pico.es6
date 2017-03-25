@@ -14,7 +14,7 @@ module.exports = (function () {
     }
 
     return {
-        getPowerModes: () => {
+        get powerModes () => {
             return powerModes;
         },
         getCurrentPowerMode: () => {
